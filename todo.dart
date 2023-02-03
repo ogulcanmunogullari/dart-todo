@@ -2,13 +2,13 @@ import 'dart:io';
 
 main() {
   bool loop = true;
-  List<Map<String, dynamic>> Todos = [
-    {'Todo': 'Ekmek Al', 'Done': false}
-  ];
+  List<Map<String, dynamic>> Todos = [];
   while (loop) {
-    for (var i = 1; i <= Todos.length; i++) {
-      print(
-          ' ${i}) ${Todos[i - 1]['Todo']} - ${Todos[i - 1]['Done'] == true ? 'Yapıldı' : 'Yapılmadı'}');
+    if (Todos.length > 0) {
+      for (var i = 1; i <= Todos.length; i++) {
+        print(
+            ' ${i}) ${Todos[i - 1]['Todo']} - ${Todos[i - 1]['Done'] == true ? 'Yapıldı' : 'Yapılmadı'}');
+      }
     }
     print(
         'İşlem Seç; \n 1: Todo Ekle \n 2: Todo Sil \n 3: Todo Değiştir \n 4: Todo Yapıldı Ya Da Yapılmadı \n 5: Çık');
